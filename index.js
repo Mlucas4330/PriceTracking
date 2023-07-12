@@ -6,8 +6,8 @@ const app = express();
 app.use(cors());
 
 
-app.get("/", (_req, res) => {
-    const prices = await getPrices();
+app.get("/", async (_req, res) => {
+    const prices = getPrices();
 
     if (!prices) {
         res.send({
@@ -20,7 +20,7 @@ app.get("/", (_req, res) => {
     res.send({
         ok: true,
         msg: "Preço atualizado",
-        data: prices
+        data: await prices
     });
 })
 
