@@ -25,4 +25,4 @@ const getPrices = async () => {
     return prices;
 }
 
-export default getPrices;
+export const prices = await getPrices();
