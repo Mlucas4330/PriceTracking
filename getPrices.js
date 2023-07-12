@@ -8,7 +8,7 @@ const getPrices = async () => {
 
     await page.goto(url);
 
-    const prices = page.evaluate(() => {
+    const prices = await page.evaluate(() => {
         const totalPrice = document.querySelector(".tertiary-price");
         const pricePerPerson = document.querySelector(".main-value")
 
@@ -22,7 +22,7 @@ const getPrices = async () => {
     })
     await browser.close();
 
-    return Promise.resolve(prices);
+    return prices;
 }
 
 export default getPrices;

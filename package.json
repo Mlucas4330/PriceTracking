@@ -1,10 +1,10 @@
 {
   "name": "PriceTracking",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.mjs",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.mjs"
   },
   "license": "MIT",
   "dependencies": {

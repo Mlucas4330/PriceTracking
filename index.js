@@ -5,8 +5,9 @@ import getPrices from './getPrices.js';
 const app = express();
 app.use(cors());
 
+
 app.get("/", (_req, res) => {
-    const prices = getPrices();
+    const prices = await getPrices();
 
     if (!prices) {
         res.send({
